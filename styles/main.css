@@ -26,6 +26,9 @@ label {
     text-align: right;
 }
 
+input, textarea, button, select {
+    padding: 0.5rem;
+}
 main {
     display: flex;
     justify-content: center;
