@@ -2,63 +2,30 @@
 
 /* FUNCTIONS */
 
-/* Step 1: Using function declaration, define a function named add that takes two arguments, number1 and number2
-   Step 2: In the function, return the sum of the parameters number1 and number2 */
-function add(number1, number2) { return number1 + number2; }
+// Functions named add, difference, product and division that takes two arguments, number1 and number2
+const add = (number1, number2) => { return number1 + number2; }             // arrow function
+function difference(number1, number2) { return number1 - number2; }         // function declaration
+const product = function(number1, number2) { return number1 * number2; }    // function expression
+const division = (number1, number2) => { return number1 / number2; }        // arrow function
 
-/* Step 3: Using function declaration, define another function named addNumbers that gets the values of two HTML form controls with IDs of addend1 and addend2. Pass them to the add function
-   Step 4: Assign the return value to an HTML form element with an ID of sum */
-function addNumbers()
+/* Using arrow function, gets the values of two HTML form controls with IDs of num1 and num2
+   Pass them to the respective function (add, difference, product or division)
+   Assign the return value to an HTML form element with an ID of operand */
+const operationNumbers = () =>
 {
-  let addend1 = parseFloat(document.querySelector('#addend1').value);
-  let addend2 = parseFloat(document.querySelector('#addend2').value);
-  document.querySelector('#sum').value = add(addend1,addend2);
+  let num1 = parseFloat(document.querySelector('#num1').value);
+  let num2 = parseFloat(document.querySelector('#num2').value);
+
+  var openationNumber = document.querySelector('#operand').value;
+
+  if (openationNumber === 'addition') {document.querySelector('#result').value = add(num1, num2);}
+  else if (openationNumber === 'difference') {document.querySelector('#result').value = difference(num1, num2);}
+  else if (openationNumber === 'product') {document.querySelector('#result').value = product(num1, num2);}
+  else if (openationNumber === 'division') {document.querySelector('#result').value = division(num1, num2);}
 }
 
-//Step 5: Add a "click" event listener to the HTML  button with an ID of addNumbers that calls the addNumbers function
-document.querySelector('#addNumbers').addEventListener('click', addNumbers);
-
-
-// Step 6: Using function expressions, repeat Steps 1-5 with new functions named subtract and subtractNumbers and HTML form controls with IDs of minuend, subtrahend, difference and subtractNumbers
-let subtract = function(number1, number2) { return number1 - number2; }
-
-let subtractNumbers = function()
-{
-  let minuend = parseFloat(document.querySelector('#minuend').value);
-  let subtrahend = parseFloat(document.querySelector('#subtrahend').value);
-  document.querySelector('#difference').value = subtract(minuend,subtrahend);
-}
-
-document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
-
-
-// Step 7: Using arrow functions, repeat Steps 1-5 with new functions named multiply and mulitplyNumbers and HTML form controls with IDs of factor1, factor2, product and multiplyNumbers
-let multiply = (number1, number2) => number1 * number2;
-
-let multiplyNumbers = () =>
-{
-  let factor1 = parseFloat(document.querySelector('#factor1').value);
-  let factor2 = parseFloat(document.querySelector('#factor2').value);
-  document.querySelector('#product').value = multiply(factor1,factor2);
-}
-
-document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
-
-// Step 8: Using any of the three function declaration types, repeat Steps 1-5 with new functions named divide and divideNumbers and HTML form controls with IDs of dividend, divisor, quotient and divideNumbers
-let divide = function(number1, number2) { return number1 / number2; }
-
-let divideNumbers = () =>
-{
-  let dividend = parseFloat(document.querySelector('#dividend').value);
-  let divisor = parseFloat(document.querySelector('#divisor').value);
-  
-  document.querySelector('#quotient').value = divide(dividend, divisor);
-}
-
-document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
-
-
-// Step 9: Test all of the mathematical functionality of the task3.html page.
+//Add a "click" event listener to the HTML dropdown list with an ID of operand that calls the operationNumbers arrow function
+document.querySelector('#operand').addEventListener('click', operationNumbers);
 
 
 /* BUILT-IN METHODS */
