@@ -48,6 +48,26 @@ document.querySelector('#operand').addEventListener('click', operationNumbers);
 // Step 1: Declare and instantiate an array variable to hold the numbers 1 through 25
 const numbers = Array(25).fill().map((_, i) => i+1);  // [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
 
+/* 
+
+Another way to declare an array variable with FOR loop
+
+const numbers = [];
+for(let i = 1; i <= 25; i++) {
+  numbers.push(i);
+}
+
+Another way to declare an array variable with WHILE loop
+
+const numbers = []
+let i = 1;
+while (i <= 25) {
+  numbers.push(i);
+  i++;
+}
+
+*/
+
 // Step 2: Assign the value of the array variable to the HTML element with an ID of "array"
 document.querySelector('#array').innerHTML = numbers;
 
