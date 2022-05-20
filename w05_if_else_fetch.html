@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Biography | Lesson 2</title>
+    <title>Week 05 | If_Else - Fetch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,12 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
     />
     <link rel="stylesheet" href="styles/main.css" />
-    <meta name="description" content="Week 02 - variables and arrays" />
+    <meta name="description" content="Week 05 - If_Else & Fetch" />
   </head>
 
   <body>
-    <!-- NAV -->
-
     <nav>
       <ul id="menu">
         <li><a id="toggleMenu">&equiv;</a></li>
@@ -31,29 +29,45 @@
     </nav>
 
     <header>
-      <h1>Biography</h1>
-      <img src="#" alt="My picture" />
+      <h1>Controlling Your Code</h1>
     </header>
     <main>
       <section>
-        <div>
-          <label>Name:</label>
-          <span id="name"></span>
-        </div>
-        <div>
-          <label>Favorite Foods:</label>
-          <span id="food"></span>
-        </div>
+        <h2>Today is <span id="message2"></span>.</h2>
+        <h3>
+          <span id="message1"></span>
+        </h3>
+        
+      </section>
+      <hr>
+      <section>
+        <h2>Temples in Utah</h2>
+        <p>
+          Sort by:
+          <select id="sortBy">
+            <option value="templeNameAscending">Temple Name Ascending</option>
+            <option value="templeNameDescending">Temple Name Descending</option>
+          </select>
+
+          <br> <br> 
+          <h3>Type the first letter in the temple name for the temples you want to search for</h3>
+          <div>
+            <input type="text" id="letter" name="letter" />
+          </div>
+
+          <div> <button id="buttonLetter">Serch</button> </div>
+
+        </p>
+        <div id="temples"></div>
       </section>
     </main>
-
     <footer>
       &copy; <span id="year"> </span> CSE 121B &#x222E; DianaQuispe &#x222E;
       Section 4
     </footer>
 
-    <script src="scripts/date.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/task2.js"></script>
+    <script src="scripts/task5.js"></script>
+    <script src="scripts/date.js"></script>
   </body>
 </html>
