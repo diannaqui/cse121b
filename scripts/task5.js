@@ -149,6 +149,7 @@ function sortTemples(first, second)
       );
 }
 
+
 const sortBy = () => {
   reset();
   let filter = document.querySelector("#sortBy").value;
